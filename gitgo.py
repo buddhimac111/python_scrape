@@ -13,7 +13,7 @@ print("Commit message: " + commitMSg)
 print("Origin branch: " + originBranch)
 
 # freeze dependencies
-resultFreeze = subprocess.run(" ", shell=True)
+resultFreeze = subprocess.run("pip freeze > requirements.txt", shell=True)
 
 if resultFreeze.returncode != 0:
     print("Error: Failed to freeze dependencies")
